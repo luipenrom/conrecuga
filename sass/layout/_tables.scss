@@ -1,0 +1,25 @@
+.tabladatos{
+    margin-top: 1rem;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    width: 50vw;
+    & th{
+        padding: 5px 10px;
+        background-color: $colorF2;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    & tr:nth-child(odd) {
+        background-color: $color3;
+    }
+    /*& th:nth-last-child(2) {
+        background-color: #555555;
+    }
+    & th:nth-last-child(1){
+        background-color: #838383;
+    }
+    & tr:nth-last-child(1){
+        padding: 5px 10px;
+        background-color: rgb(240, 164, 164);
+        color: #000000;
+    }*/
+}

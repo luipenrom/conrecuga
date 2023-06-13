@@ -1,0 +1,107 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.grafico{
+    height: 30vh;
+    width: 100%;
+    background-image: url(../img/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.cabecera{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    &__enlaces{
+        display: table;
+        & ul{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        & li{
+            display: inline-block;
+            list-style: none;
+            border-bottom: 2px solid $color2;
+            border-right: 2px solid $color3;
+        }
+        & a{
+            @include titulosmenu();
+            color: $colorF1;
+            text-decoration: none;
+        }
+    }
+}
+
+.caja{
+    &__titulo{
+        @include titulos();
+        border-bottom: 2px solid $color3;
+        &-cabeza{
+            @include titulos();
+            padding: 1rem
+        }
+        &-texto{
+            @include textos();
+        }
+    }
+    &__textos{
+        margin: 0 auto;
+        @include textos();
+        padding-bottom: 3rem;
+    }
+    &__honeycomb{
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+    &__divisiones{
+        width: 50vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 2rem;
+    }
+    &__logo{
+        justify-content: center;
+        padding: 2rem 0;
+    }
+    &__graficas{
+        width: 50vw;
+    }
+}
+
+.muestra{
+    display:flex;
+    flex-direction: column;
+    &__titulo{
+        @include titulosmenu;
+    }
+    &__imagen{
+        padding: 1rem;
+    }
+}
+
+.pie{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__datos{
+        @include textos_s();
+    }
+    &__fecha{
+        @include textos_s();
+    }
+}

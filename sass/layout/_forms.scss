@@ -1,0 +1,97 @@
+.formulario{
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5rem;
+    &__tabla{
+        width: 300px;
+    }
+    &__tabla td:nth-child(1){
+        text-align: right;
+        color:$colorF2; 
+        background-color: $color2;
+        padding: 0.2rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    &__tabla tr:nth-child(1){
+        display: none;
+    }
+    &__tabla input, textarea{
+        width: 13rem;
+        font-size: 1.2rem;
+        background-color: $colorBase;
+    }
+    &__botones input{
+        @include titulosmenu();
+        display: block;
+        border: 3px solid $colorF2;
+        height: 3rem;
+        width: 8rem;
+        margin: 0 1.4rem;
+        color: $colorF1;
+        &[type=submit]{
+            background-color: $color7;
+        }
+        &[type=reset]{
+            background-color: $color4;
+        }
+    }
+}
+
+.formudatos {
+  // Lo centras en la pantalla usando flexbox
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80vw;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  & label {
+    @include textos();
+    text-align: left;
+    margin: 0.2rem;
+  }
+  & input, 
+  & select {
+    @include textos();
+    height: 40px;
+    margin: 0.2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: $color1;  
+    &:focus {
+      background-color: $color2;
+      border: solid 2px $colorF2;
+      outline: none;
+      color: #fff;
+      box-shadow: inset -2px -2px rgba(0,0,0,0.1);
+      transform: scale(1.02);
+      z-index:1;
+    }
+  }
+  & button {
+    @include botones();
+    width: 78vw;
+    border-radius: 5px;
+    border: none;
+    background-color: $colorF2;
+    height: 3rem;
+    margin: 1rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: lighten($colorF3, 10%);
+      border: solid 6px lighten($colorF2, 10%);
+      cursor: pointer;
+      z-index:1;
+    }
+  }
+}
+
+select:disabled {
+  opacity: 0.01;
+  color: $colorMedio;
+  background-color: $colorOscuro;
+}
