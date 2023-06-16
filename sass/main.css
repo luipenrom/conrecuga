@@ -520,6 +520,26 @@ select:disabled {
   color: #666666;
 }
 
+.pospresenta {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.pospresenta__enlaces ul {
+  display: table-cell;
+  vertical-align: middle;
+  list-style: none;
+}
+.pospresenta__enlaces li {
+  margin: 1rem;
+}
+.pospresenta__enlaces a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.4rem;
+}
+
 .titulos__secciones {
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;

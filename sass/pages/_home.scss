@@ -105,3 +105,25 @@
         @include textos_s();
     }
 }
+
+.pospresenta{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    &__enlaces{
+        & ul{
+            display: table-cell;
+            vertical-align: middle;
+            list-style: none;
+        }
+        & li{
+            margin: 1rem;
+        }
+        & a{
+            text-decoration: none;
+            color: $colorF1;
+            font-size: 1.4rem;
+        }
+    }
+}
